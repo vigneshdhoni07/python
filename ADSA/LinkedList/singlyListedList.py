@@ -56,6 +56,22 @@ def insertEleRecurs(head,curr,i,newNode,c):
 
 newHeadRecursive=insertEleRecurs(list,list,ind,newNode,0)
 printInput(newHeadRecursive)
-    
-        
-    
+
+def deleteNodeRecursively(head,curr,prev,i,c):
+    if curr is None:
+        return head
+    if(i==0):
+        if head.next is not None:
+            head=head.next
+            return head
+        else:
+            return None
+    if(c==i):
+        prev.next=temp=curr.next
+        return head
+    deleteNodeRecursively(head,curr.next,curr,i,c+1)
+    return head
+
+delIndex=int(input("Enter Index To Delete:"))        
+nodeAfterDeletion=deleteNodeRecursively(list,list,None,delIndex,0)
+printInput(nodeAfterDeletion)    
