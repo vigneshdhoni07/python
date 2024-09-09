@@ -1,0 +1,33 @@
+functions-python:
+---------------------
+syntax:
+def <function_name>(args):
+   return 
+
+how function flow works
+------------------------
+if fn A is calling fn B
+fn B is calling fn C 
+fn C is calling fn D 
+
+then first D will get executed fully then C then B then A.
+it(call stack) follows first in last out(filo).
+
+Scope of Variables:
+-------------------
+In python only two scopes are there
+1.local
+2.global
+
+local variables are defined inside fn and its scope is with in fn
+
+global variables are defined globally and it can be accessed from any where.
+even it can be accessed in line before its declearation but before fn call.
+i.e, you can acess any global variables with in fn but it should be defined before fn call.
+
+if we try to change a global variable inside fn then it will create a new local variable with the same name and i will not change the global variable.
+but if we use global keyword inside fn then it will not create new variable and it updates the global variable itself.
+
+default parameters:
+similar to js we can pass default parameters to a fn and it should be after non-default parameters while function definition and fn call.
+and while calling fn with multiple default parameter we can specify for which default parameter we are passing value.

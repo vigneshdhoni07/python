@@ -1,0 +1,13 @@
+a Function calling itself is recursion and when a huge problem depends on small problems we will use recursion
+eg:factorial of a number
+
+maximum recursion depth is defined and if we exceed we will get error if we dont use base case.
+
+recursion is based on PMI(principle of mathematical induction)
+
+base case is the first step of PMI.
+
+recursion depth:
+  even if base case is specified you may have recursion error if it reaches recursion depth.
+  we can set recursion limit to avoid it.
+  it can be set using sys library
